@@ -1,9 +1,9 @@
-import { takeLatest } from 'redux-saga/effects'
-import * as types from '../store/types'
+import { takeLatest } from 'redux-saga/effects';
+import * as types from '../store/types';
 
 
-function always() { }
+function always(): void { console.log('Whatever...'); }
 
 export default function* root() {
-  yield takeLatest([types.GET_REQUEST], always)
+  yield takeLatest([types.GET_REQUEST], always);
 }

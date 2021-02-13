@@ -1,16 +1,16 @@
-import { GET_TITLE } from '../types'
-import { Action } from './'
+import { GET_TITLE } from '../types';
+import { Action } from './';
 
 enum Title {
   title = 'Welcome'
 }
-const { title } = Title
+const { title } = Title;
 
 interface I_State<T> {
   title: T
 }
 
-const INITIAL_STATE: I_State<string> = Object.freeze({ title })
+const INITIAL_STATE: I_State<string> = Object.freeze({ title });
 
 export default function TitleReducer(
   state = INITIAL_STATE,
@@ -20,8 +20,8 @@ export default function TitleReducer(
       return {
         ...state,
         title
-      }
+      };
     }
-    default: return state
+    default: return state;
   }
 }

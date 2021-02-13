@@ -1,4 +1,4 @@
-import * as types from '../types'
+import * as types from '../types';
 
 interface InitialStates<T = string, U = boolean> {
   data: T[],
@@ -14,9 +14,9 @@ const INITIAL_STATES: InitialStates<string, boolean> = {
   data: [],
   loading: false,
   errors: false
-}
+};
 
-export default function ReducerRequest(state = INITIAL_STATES, action: Action) {
+export default function ReducerRequest(state = INITIAL_STATES, action: Action): InitialStates {
   switch (action.type) {
     case types.GET_REQUEST: {
       return {
@@ -24,7 +24,7 @@ export default function ReducerRequest(state = INITIAL_STATES, action: Action) {
         data: [],
         loading: false,
         errors: false
-      }
+      };
     }
     case types.GET_REQUEST_FAILURE: {
       return {
@@ -32,7 +32,7 @@ export default function ReducerRequest(state = INITIAL_STATES, action: Action) {
         data: [],
         loading: false,
         errors: true
-      }
+      };
     }
     case types.GET_REQUEST_SUCCESS: {
       return {
@@ -40,9 +40,9 @@ export default function ReducerRequest(state = INITIAL_STATES, action: Action) {
         data: action.payload,
         loading: false,
         errors: false
-      }
+      };
     }
-    default: return state
+    default: return state;
   }
 
 }

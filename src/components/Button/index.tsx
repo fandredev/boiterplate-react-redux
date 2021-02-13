@@ -5,4 +5,4 @@ interface Props<T> {
 
 
 export const Button: React.FC<Props<string>> = ({ type = 'submit', value = 'Login' }) =>
-  <input type={type} className="btn" value={value} />
+	<input type={type} className="btn" value={value} />;

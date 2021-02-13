@@ -7,17 +7,17 @@ interface Props {
   placeholder: string
 }
 
-const Input: React.FC<Props> = ({ placeholder, icon, typeInput = 'tet', className } ) => {
-  return (
-     <div className={`input-div ${className}`}>
-      <div className="i">
-        <i className={`fas fa-${icon}`}></i>
-      </div>
-      <div className="div">
-        <input type={typeInput} className="input" placeholder={placeholder}/>
-      </div>
-    </div>
-  )
-}
+const Input: React.FC<Props> = ({ placeholder, icon, typeInput = 'text', className } ) => {
+	return (
+		<div className={`input-div ${className}`}>
+			<div className="i">
+				<i className={`fas fa-${icon}`}></i>
+			</div>
+			<div className="div">
+				<input type={typeInput} className="input" placeholder={placeholder}/>
+			</div>
+		</div>
+	);
+};
 
-export default Input
+export default Input;

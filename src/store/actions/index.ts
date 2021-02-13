@@ -1,28 +1,27 @@
-import * as types from '../types'
+import { Action } from '../reducers';
+import * as types from '../types';
 
-type ReturnActions = {
-  type: string
-}
-export function getRequest(): ReturnActions {
+export function getRequest(): Action {
   return {
     type: types.GET_REQUEST
-  }
+  };
 }
 
-export function getRequestSuccess(): ReturnActions {
+export function getRequestSuccess(): Action {
   return {
-    type: types.GET_REQUEST_SUCCESS
-  }
+    type: types.GET_REQUEST_SUCCESS,
+    payload: 'Whatever'
+  };
 }
 
-export function getRequestFailure(): ReturnActions {
+export function getRequestFailure(): Action {
   return {
     type: types.GET_REQUEST_FAILURE
-  }
+  };
 }
 
-export function getTitle(): ReturnActions {
+export function getTitle(): Action {
   return {
     type: types.GET_TITLE
-  }
+  };
 }
