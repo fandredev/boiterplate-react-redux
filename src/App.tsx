@@ -22,7 +22,7 @@ interface SelectorProps {
 
 function App() : JSX.Element {
   // const dispatchers = useDispatch()
-  const title = useSelector((state : SelectorProps) => state.ReducerTitle.title)
+  const title = useSelector((state : SelectorProps) => state.ReducerTitle.title);
 
   return (
     <>
